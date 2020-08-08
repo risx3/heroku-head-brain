@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Linear Regression</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .form-signin {
+            width: 100%;
+            max-width: 330px;
+            padding: 15px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+
+<body class="bg-light">
+    <div class="py-5 text-center">
+        <h1>Linear Regression</h1>
+        <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group
+            has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+
+        <form action="{{url_for('predict')}}" method="post" class="form-signin">
+            <h1 class="h3 mb-3 font-weight-normal">Head-Brain Size</h1><br />
+            <input class="form-control" type="text" name="headsize" placeholder="Head Size (cm^3)" required
+                autofocus /><br />
+            <button type="submit" class="btn btn-lg btn-primary btn-block" type="submit">Predict</button>
+        </form>
+
+        <p class="mt-5 mb-3 font-weight-normal">{{ prediction_text }}</p>
+        <p class="mt-5 mb-3 text-muted">Back</p>
+    </div>
+</body>
+
+</html>
