@@ -36,12 +36,12 @@
     </style>
 </head>
 
-
 <body class="bg-light">
     <div class="py-5 text-center">
         <h1>Linear Regression</h1>
-        <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group
-            has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+        <p class="lead">This is an example for Linear regression. We have deployed the ML model for head-brain on
+            Heroku.
+            Here, we will enter the value of head size (in cm^3). Our model will predict the brain weight.</p>
 
         <form action="{{url_for('predict')}}" method="post" class="form-signin">
             <h1 class="h3 mb-3 font-weight-normal">Head-Brain Size</h1><br />
@@ -50,8 +50,10 @@
             <button type="submit" class="btn btn-lg btn-primary btn-block" type="submit">Predict</button>
         </form>
 
-        <p class="mt-5 mb-3 font-weight-normal">{{ prediction_text }}</p>
-        <p class="mt-5 mb-3 text-muted">Back</p>
+        <h3 class="mt-5 mb-3 font-weight-normal">{{ prediction_text }}</h3>
+        <p class="mt-5 mb-3 text-muted">
+            <a href="https://risx3.github.io/head-brain/" target="_blank">Back</a>
+        </p>
     </div>
 </body>
 
